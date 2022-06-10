@@ -37,8 +37,28 @@ function apiFacade() {
         return await fetch(URL + "/api/info/jokes")
             .then(handleHttpErrors)
             // .then(res => ())
-
     }
+
+
+    const getAllOwners = async() => {
+
+        return await fetch(URL + "/api/info/owners")
+            .then(handleHttpErrors)
+    }
+
+
+    const getAllHarbours = async() => {
+
+        return await fetch(URL + "/api/info/harbours")
+            .then(handleHttpErrors)
+    }
+
+    const getBoatsByHarbour = async(harbourName) => {
+
+        return await fetch(URL + "/api/info/boats/" + harbourName)
+            .then(handleHttpErrors)
+    }
+
 
     const login = (user, password) => {
         const options = makeOptions("POST", true,{username: user, password: password });
@@ -86,7 +106,10 @@ function apiFacade() {
         fetchData,
         getRoles,
         getJokes,
-        getName
+        getName,
+        getAllOwners,
+        getAllHarbours,
+        getBoatsByHarbour
     }
 }
 

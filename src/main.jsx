@@ -10,6 +10,8 @@ import UserPage from "./routes/userPage";
 import AdminPage from "./routes/adminPage";
 import ApiFacade from "./apiFacade";
 import Jokes from "./routes/jokes";
+import AllOwners from "./routes/allOwners";
+import HarbourBoats from "./routes/harbourBoats";
 
 
 
@@ -22,6 +24,8 @@ render(
                 <Route path="/userpage" element={<UserPage/>}/>
                 <Route path="/adminpage" element={<AdminPage/>}/>
                 <Route path="/jokes" element={<Jokes/>}/>
+                <Route path="/allowners" element={<AllOwners/>}/>
+                <Route path="/harbourboats" element={<HarbourBoats/>}/>
             </Route>
         </Routes>
     </BrowserRouter>,
