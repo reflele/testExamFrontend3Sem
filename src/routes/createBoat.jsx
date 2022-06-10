@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "../createBoat.css"
+import apiFacade from "../apiFacade";
 
 const CreateBoat = props => {
 
@@ -28,7 +29,7 @@ const CreateBoat = props => {
 
 
     const clickHandler = () => {
-
+        apiFacade.createBoat(name,brand,make,image);
     }
 
     return (
@@ -37,15 +38,15 @@ const CreateBoat = props => {
 
             <div className="boatInputContainer">
                 <div className="boatInputs">
-                    <input onChange={nameChange} id="boatname" type="text" value="Enter name" />
-                    <input onChange={brandChange} id="boatbrand" type="text" value="Enter brand" />
-                    <input onChange={makeChange} id="boatmake" type="text" value="Enter make" />
-                    <input onChange={imageChange} id="boatimage" type="text" value="Enter image" />
+                    <input onChange={nameChange} id="boatname" type="text" placeholder="Enter name" />
+                    <input onChange={brandChange} id="boatbrand" type="text" placeholder="Enter brand" />
+                    <input onChange={makeChange} id="boatmake" type="text" placeholder="Enter make" />
+                    <input onChange={imageChange} id="boatimage" type="text" placeholder="Enter image" />
                 </div>
             </div>
 
             <div className="boatBtnContainer">
-                <button className="btn btn-secondary">Create boat</button>
+                <button onClick={clickHandler} className="btn btn-secondary">Create boat</button>
             </div>
 
         </div>

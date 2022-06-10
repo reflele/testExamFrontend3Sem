@@ -59,6 +59,12 @@ function apiFacade() {
             .then(handleHttpErrors)
     }
 
+    const createBoat = async(boatName,boatBrand,boatMake,boatImage) => {
+        const options = makeOptions("POST", false,{brand: boatBrand, make: boatMake,
+                                                                        name: boatName, image: boatImage});
+        return fetch(URL + "/api/info/createboat", options)
+    }
+
 
     const login = (user, password) => {
         const options = makeOptions("POST", true,{username: user, password: password });
@@ -109,7 +115,8 @@ function apiFacade() {
         getName,
         getAllOwners,
         getAllHarbours,
-        getBoatsByHarbour
+        getBoatsByHarbour,
+        createBoat
     }
 }
 
