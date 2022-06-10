@@ -12,6 +12,7 @@ import ApiFacade from "./apiFacade";
 import Jokes from "./routes/jokes";
 import AllOwners from "./routes/allOwners";
 import HarbourBoats from "./routes/harbourBoats";
+import CreateBoat from "./routes/createBoat";
 
 
 
@@ -26,6 +27,7 @@ render(
                 <Route path="/jokes" element={<Jokes/>}/>
                 <Route path="/allowners" element={<AllOwners/>}/>
                 <Route path="/harbourboats" element={<HarbourBoats/>}/>
+                <Route path="/createboat" element={<CreateBoat/>}/>
             </Route>
         </Routes>
     </BrowserRouter>,

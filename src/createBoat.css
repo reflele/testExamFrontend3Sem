@@ -1,0 +1,18 @@
+
+.boatInputContainer{
+    display: flex;
+    justify-content: center;
+
+}
+
+.boatInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.boatBtnContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
