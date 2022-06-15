@@ -53,11 +53,25 @@ function apiFacade() {
             .then(handleHttpErrors)
     }
 
-    const getBoatsByHarbour = async(harbourName) => {
+    const getAllBoats = async() => {
 
-        return await fetch(URL + "/api/info/boats/" + harbourName)
+        return await fetch(URL + "/api/info/boats")
             .then(handleHttpErrors)
     }
+
+
+    const getBoatsByHarbour = async(harbourName) => {
+
+        return await fetch(URL + "/api/info/harbourboats/" + harbourName)
+            .then(handleHttpErrors)
+    }
+
+    const getOwnersByBoatName = async(boatName) => {
+
+        return await fetch(URL + "/api/info/boatowners/" + boatName)
+            .then(handleHttpErrors)
+    }
+
 
     const createBoat = async(boatName,boatBrand,boatMake,boatImage) => {
         const options = makeOptions("POST", false,{brand: boatBrand, make: boatMake,
@@ -114,7 +128,9 @@ function apiFacade() {
         getJokes,
         getName,
         getAllOwners,
+        getAllBoats,
         getAllHarbours,
+        getOwnersByBoatName,
         getBoatsByHarbour,
         createBoat
     }

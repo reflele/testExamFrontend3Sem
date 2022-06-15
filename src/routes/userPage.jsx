@@ -12,6 +12,7 @@ const UserPage = props => {
                         <div className="link-container">
                             <Link to="/allowners">All owners</Link> |{" "}
                             <Link to="/harbourboats">Boats by harbour</Link> |{" "}
+                            <Link to="/boatowners">boat owners</Link> |{" "}
                         </div>
 
 

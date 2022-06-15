@@ -30,8 +30,10 @@ function LogIn({login}) {
                     <label htmlFor="exampleInputPassword1">Password</label>
                     <input type="password" className="form-control" id="password" placeholder="Password"/>
                 </div>
+                <Link to="/welcome">
                 <button className="btn btn-primary login-element" onClick={performLogin}>Login</button>
-            </form>
+                </Link>
+                </form>
         </div>
     )
 
@@ -85,7 +87,7 @@ function App() {
                             <Link to="/welcome">Welcome page</Link> |{" "}
                             <Link to="/userpage">User page</Link> |{" "}
                             <Link to="/adminpage">Admin page</Link> |{" "}
-                            <Link to="/jokes">Jokes</Link>
+                            {/*<Link to="/jokes">Jokes</Link>*/}
                         </div>
 
                     </nav>
